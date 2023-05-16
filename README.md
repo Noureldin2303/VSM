@@ -9,17 +9,16 @@ the score of the i-th term for that vector.
 - The weights represent the importance of the terms (aka words, tokens) in the documents and queries.
 - Each weight is a measure of the importance of an index term in a document or a query, respectively.
 ```
-#### The main score functions are based on: Term-Frequency (tf) and Inverse-Document-Frequency(idf).
+##### The main score functions are based on: Term-Frequency (tf) and Inverse-Document-Frequency(idf).
 
-Term-Frequency and Inverse-Document Frequency – The Term-Frequency (tf_{ij}) is computed with respect to the i-th term and j-th document where $ n_{i, j} are the occurrences of the i-th term in the j-th document.
+###### Term-Frequency and Inverse-Document Frequency – The Term-Frequency (tf_{ij}) is computed with respect to the i-th term and j-th document where $ n_{i, j} are the occurrences of the i-th term in the j-th document.
 
-The idea is that if a document has multiple receptions of given terms, it will probably deals with that argument.
-The Inverse-Document-Frequency (idf_{i}) takes into consideration the i-th terms and all the documents in the collection 
+###### The idea is that if a document has multiple receptions of given terms, it will probably deals with that argument.
+###### The Inverse-Document-Frequency (idf_{i}) takes into consideration the i-th terms and all the documents in the collection 
 
 ![image](idf.png)
 
-The intuition is that rare terms are more important that common ones : if a term is present only in a document it can mean that term characterizes that document.
-The final score for the i-th term in the j-th document consists of a simple multiplication Since a document/query contains only a subset of all the distinct terms in the collection, the term frequency can be zero for a big number of terms : this means a sparse vector representation is needed to optimize the space requirements.
+###### The intuition is that rare terms are more important that common ones : if a term is present only in a document it can mean that term characterizes that document.The final score for the i-th term in the j-th document consists of a simple multiplication Since a document/query contains only a subset of all the distinct terms in the collection, the term frequency can be zero for a big number of terms : this means a sparse vector representation is needed to optimize the space requirements.
 
 #### Cosine Similarity
 ```vue
